@@ -2,8 +2,17 @@
 
 namespace Products1.Application.DTOs
 {
-   
-        public class AddProductDTO
+   public class APIResponse<T>
+    {
+        public T? Data { get; set; }
+        public int TotalCount { get; set; }
+        public bool success { get; set; }
+
+        public string Message { get; set; } = "";
+
+
+    }
+    public class AddProductDTO
         {
             public string Name { get; set; } = "";
             public string Brand { get; set; } = "";
@@ -15,6 +24,7 @@ namespace Products1.Application.DTOs
         [Range(0, double.MaxValue)]
         public decimal Price { get; set; }
 
+ 
     }
 
     public class UpdateProductDTO
@@ -42,6 +52,8 @@ namespace Products1.Application.DTOs
 
         [Range(0, double.MaxValue)]
         public decimal Price { get; set; }
+
+      
     }
     public class DelteProductDTO
         {

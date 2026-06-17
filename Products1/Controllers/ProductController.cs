@@ -18,27 +18,28 @@ namespace Products1.Controllers
         [HttpPost]
         public async Task<IActionResult> AddProduct(AddProductDTO product)
         {
-            var result = await _service.AddProduct(product);
+           int  result = await _service.AddProduct(product);
             if (result > 0)
             {
-                return Ok(new ApiResponse<AddProductDTO>
+                return Ok(new APIResponse<AddProductDTO>
                 {
-                    Data = result,
+                    Data = product,
                     TotalCount = 1,
                     success = true,
                     Message = "Product added successfully"
                 });
             }
             else
-            { 
-            return BadRequest(new ApiResponse<AddProductDTO>
             {
-                Data = product,
-                TotalCount = 0,
-                success = false,
-                Message = "Failed to add product"
-            });
-        }
+                return BadRequest(new APIResponse<AddProductDTO>
+                {
+                    
+                    TotalCount = 0,
+                    success = false,
+                    Message = "Failed to add product"
+                });
+            }
+            
         }
 
         [HttpGet]
@@ -52,19 +53,11 @@ namespace Products1.Controllers
         public async Task<IActionResult> GetProductById(int id)
         {
             var result = await _service.GetProductbyid(id);
-            if (result !=null)
+            if (result == null)
             {
-                return Ok(new ApiResponse<ProductDTO>
-                {
-                    Data = result,
-                    TotalCount = 1,
-                    success = true,
-                    Message = "Product retrieved successfully"
-                });
+                return NotFound();
             }
-
-
-
+            return Ok(result);
         }
 
         [HttpDelete("{id}")]
