@@ -48,11 +48,14 @@ namespace Products1.Infrastucture.Repository.Implementation
             _context.Products.Remove(product);
             return await _context.SaveChangesAsync();
         }
+<<<<<<< HEAD
 
         public Task<List<Products>?> GetProductsByIds(List<int> ids)
         {
             return _context.Products.Where(p => ids.Contains(p.Id)).ToListAsync();
 
         }
+=======
+>>>>>>> 6f049bb (Add .gitignore and remove generated files)
     }
 }
