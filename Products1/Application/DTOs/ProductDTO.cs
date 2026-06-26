@@ -55,6 +55,13 @@ namespace Products1.Application.DTOs
 
       
     }
+
+    public class ProductShortDetaisDTO
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = "";
+        public decimal Price { get; set; }
+    }
     public class DelteProductDTO
         {
             public int Id { get; set; }

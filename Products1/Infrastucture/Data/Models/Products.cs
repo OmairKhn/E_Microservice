@@ -20,7 +20,9 @@ namespace Products1.Infrastucture.Data.Models
         [Range(0, double.MaxValue)]
         public decimal Price { get; set; }
 
-
-
+        internal static bool Any()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

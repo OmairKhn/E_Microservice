@@ -128,7 +128,7 @@ namespace Products1.Controllers
 
                 return Ok(new APIResponse<object>
                 {
-                    Data = null,
+                    Data = result,
                     success = true,
                     Message = "Product deleted successfully"
                 });
@@ -153,7 +153,7 @@ namespace Products1.Controllers
 
                 return Ok(new APIResponse<object>
                 {
-                    Data = null,
+                    Data = result,
                     success = true,
                     Message = "Product updated successfully"
                 });
@@ -168,5 +168,25 @@ namespace Products1.Controllers
 
             }
         }
+
+
+
+        [HttpPost("products-by-ids")]
+        public async Task<IActionResult> GetProductsByIds([FromBody] List<int> ids)
+        {
+            var result = await _service.GetProductsByIds(ids);
+
+            return Ok(new APIResponse<List<ProductShortDetaisDTO>>
+            {
+                Data = result,
+                TotalCount = result?.Count ?? 0,
+                success = true,
+                Message = "Products retrieved successfully"
+            });
+        }
     }
+
+
+    
+
 }

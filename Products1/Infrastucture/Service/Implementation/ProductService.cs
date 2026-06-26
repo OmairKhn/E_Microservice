@@ -111,6 +111,21 @@ namespace Products1.Infrastucture.Service.Implementation
             }
         }
 
-        
+        public async Task<List<ProductShortDetaisDTO>?> GetProductsByIds(List<int> ids)
+        {
+          var  Product = await _productRepository.GetProductsByIds(ids);
+
+            if (Product == null || !Product.Any())
+                return null;
+
+            return Product?.Select(p => new ProductShortDetaisDTO
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Price = p.Price
+            }).ToList();
+        }
+
+
     }
 }

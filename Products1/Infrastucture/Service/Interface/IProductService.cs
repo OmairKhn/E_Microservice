@@ -13,6 +13,8 @@ namespace Products1.Infrastucture.Service.Interface
 
         public Task<ProductDTO?> GetProductbyid(int id);
 
+        Task<List<ProductShortDetaisDTO>?> GetProductsByIds(List<int> ids);
+
         public Task<List<ProductDTO>> GetAllProducts();
     }
 }

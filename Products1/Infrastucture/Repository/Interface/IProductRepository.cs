@@ -14,6 +14,8 @@ namespace Products1.Infrastucture.Repository.Interface
         public Task<Products?> GetProductbyid(int id);
 
         public Task<List<Products>> GetAllProducts();
-      
+
+        Task<List<Products>?> GetProductsByIds(List<int> ids);
+
     }
 }
