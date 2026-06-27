@@ -14,12 +14,10 @@ namespace Products1.Infrastucture.Repository.Interface
         public Task<Products?> GetProductbyid(int id);
 
         public Task<List<Products>> GetAllProducts();
-<<<<<<< HEAD
 
-        Task<List<Products>?> GetProductsByIds(List<int> ids);
+      public  Task<List<Products  >> GetProductByName(string name);
+        public   Task<List<Products>?> GetProductsByIds(List<int> ids);
 
-=======
-      
->>>>>>> 6f049bb (Add .gitignore and remove generated files)
+
     }
 }

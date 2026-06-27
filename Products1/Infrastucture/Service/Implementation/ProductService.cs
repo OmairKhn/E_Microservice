@@ -111,7 +111,7 @@ namespace Products1.Infrastucture.Service.Implementation
             }
         }
 
-<<<<<<< HEAD
+
         public async Task<List<ProductShortDetaisDTO>?> GetProductsByIds(List<int> ids)
         {
           var  Product = await _productRepository.GetProductsByIds(ids);
@@ -128,8 +128,6 @@ namespace Products1.Infrastucture.Service.Implementation
         }
 
 
-=======
-        
->>>>>>> 6f049bb (Add .gitignore and remove generated files)
+
     }
 }

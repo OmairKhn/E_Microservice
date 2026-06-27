@@ -20,14 +20,14 @@ namespace Products1.Infrastucture.Data.Models
         [Range(0, double.MaxValue)]
         public decimal Price { get; set; }
 
-<<<<<<< HEAD
+
         internal static bool Any()
         {
             throw new NotImplementedException();
         }
-=======
 
 
->>>>>>> 6f049bb (Add .gitignore and remove generated files)
+
+
     }
 }

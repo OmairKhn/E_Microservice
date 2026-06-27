@@ -2,10 +2,7 @@
 
 namespace Products1.Application.DTOs
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c2e0b3c (optamization and Apiresponse add)
+
    public class APIResponse<T>
     {
         public T? Data { get; set; }
@@ -16,14 +13,11 @@ namespace Products1.Application.DTOs
 
 
     }
-    public class AddProductDTO
-<<<<<<< HEAD
-=======
+    
+
    
         public class AddProductDTO
->>>>>>> 6f049bb (Add .gitignore and remove generated files)
-=======
->>>>>>> c2e0b3c (optamization and Apiresponse add)
+
         {
             public string Name { get; set; } = "";
             public string Brand { get; set; } = "";
@@ -35,14 +29,7 @@ namespace Products1.Application.DTOs
         [Range(0, double.MaxValue)]
         public decimal Price { get; set; }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-=======
->>>>>>> 6f049bb (Add .gitignore and remove generated files)
-=======
- 
->>>>>>> c2e0b3c (optamization and Apiresponse add)
+
     }
 
     public class UpdateProductDTO
@@ -70,8 +57,7 @@ namespace Products1.Application.DTOs
 
         [Range(0, double.MaxValue)]
         public decimal Price { get; set; }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
       
     }
@@ -81,12 +67,7 @@ namespace Products1.Application.DTOs
         public int Id { get; set; }
         public string Name { get; set; } = "";
         public decimal Price { get; set; }
-=======
->>>>>>> 6f049bb (Add .gitignore and remove generated files)
-=======
 
-      
->>>>>>> c2e0b3c (optamization and Apiresponse add)
     }
     public class DelteProductDTO
         {
